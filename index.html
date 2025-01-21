@@ -1,112 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karlo Grošelj</title>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+    <title>Karlo Grošelj</title> <!-- Sets the title of the page -->
     <style>
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-    gap: 2vw; /* Ensures consistent spacing between elements */
+    margin: 0; /* Removes default browser margin */
+    padding: 0; /* Removes default browser padding */
+    background-color: black; /* Sets the background color of the page */
+    color: white; /* Sets the text color */
+    font-family: Arial, sans-serif; /* Sets the font family */
+    display: flex; /* Uses flexbox layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: flex-start; /* Aligns items to the top vertically */
+    height: auto; /* Adjusts height automatically */
+    min-height: 100vh; /* Ensures the page takes at least the full viewport height */
+    overflow-y: auto; /* Enables vertical scrolling if necessary */
+    gap: 0vw; /* Adds spacing between child elements */
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 2vw;
-    box-sizing: border-box;
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    width: 100%; /* Makes the header take the full width */
+    padding: 2vw; /* Adds padding inside the header */
+    box-sizing: border-box; /* Includes padding and border in width/height calculations */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 1.5vw;
+    margin: 0; /* Removes default margin */
+    font-size: 1.5vw; /* Sets the font size for the title */
 }
 
 header h2 {
-    margin: 0;
-    font-size: 1vw;
-    color: white;
-    font-weight: normal;
-    margin-top: 0.5vw;
+    margin: 0; /* Removes default margin */
+    font-size: 1vw; /* Sets the font size for the subtitle */
+    color: white; /* Sets the text color */
+    font-weight: normal; /* Sets normal font weight */
+    margin-top: 0.5vw; /* Adds spacing between the title and subtitle */
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 3840px;
-    aspect-ratio: 16 / 9;
-    margin-bottom: 2vw;
+    position: relative; /* Sets position for child elements */
+    width: 100%; /* Makes the container full width */
+    max-width: 3840px; /* Sets the maximum width */
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
+    margin-bottom: 2vw; /* Adds space below each video container */
 }
 
 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute; /* Positions iframe relative to its container */
+    top: 0; /* Aligns iframe to the top */
+    left: 0; /* Aligns iframe to the left */
+    width: 100%; /* Makes the iframe fill the container width */
+    height: 100%; /* Makes the iframe fill the container height */
 }
 
 .video-label {
-    position: absolute;
-    top: 1vw;
-    left: 1vw;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5vw 1vw;
-    font-size: 1.2vw;
-    color: white;
-    border-radius: 0.3vw;
-    z-index: 2;
+    position: absolute; /* Positions the label within the video container */
+    top: 1vw; /* Positions the label from the top */
+    left: 1vw; /* Positions the label from the left */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the label */
+    padding: 0.5vw 1vw; /* Adds padding inside the label */
+    font-size: 1.2vw; /* Sets the font size for the label text */
+    color: white; /* Sets the text color */
+    border-radius: 0.3vw; /* Rounds the corners of the label */
+    z-index: 2; /* Ensures the label appears above other elements */
 }
 
 .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1;
+    position: absolute; /* Positions the overlay within the container */
+    top: 0; /* Aligns the overlay to the top */
+    left: 0; /* Aligns the overlay to the left */
+    width: 100%; /* Makes the overlay fill the container width */
+    height: 100%; /* Makes the overlay fill the container height */
+    background-color: rgba(0, 0, 0, 0); /* Transparent background for the overlay */
+    z-index: 1; /* Ensures the overlay is behind the label */
 }
-
     </style>
 </head>
 <body>
     <header>
-        <div class="left">
-            <h1>Karlo Grošelj</h1>
-            <h2>V premikajočih slikah</h2>
+        <div class="left"> <!-- Container for the header text -->
+            <h1>Karlo Grošelj</h1> <!-- Main title of the page -->
+            <h2>Slike v gibanju</h2> <!-- Subtitle of the page -->
         </div>
     </header>
 
-    <div class="video-container">
-        <div class="video-label">Prvi dan doma</div>
-        <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
-            <iframe allow="fullscreen;autoplay" allowfullscreen height="100%" 
-                    src="https://iframe.mediadelivery.net/embed/372083/5c286cd4-c0a1-44bb-a609-c04f5ee97318?autoplay=true&loop=true&muted=true&preload=true&responsive=true" 
-                    width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;">
+    <div class="video-container"> <!-- Container for the first video -->
+        <div class="video-label">Prvi dan doma</div> <!-- Label for the first video -->
+        <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"> <!-- Wrapper to maintain aspect ratio -->
+            <iframe allow="fullscreen" allowfullscreen height="100%" 
+                    src="https://iframe.mediadelivery.net/embed/372083/5c286cd4-c0a1-44bb-a609-c04f5ee97318?preload=true&responsive=true" 
+                    width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"> <!-- First video iframe -->
             </iframe>
         </div>
     </div>
 
-    <div class="video-container">
-        <div class="video-label">Prvi dan doma</div>
-        <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
-            <iframe allow="fullscreen;autoplay" allowfullscreen height="100%" 
-                    src="https://iframe.mediadelivery.net/embed/372083/aa0a6c83-3ff0-4ad0-94b5-96ea220c4be4?autoplay=true&loop=true&muted=true&preload=true&responsive=true" 
-                    width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;">
+    <div class="video-container"> <!-- Container for the second video -->
+        <div class="video-label">Prvi dan doma</div> <!-- Label for the second video -->
+        <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"> <!-- Wrapper to maintain aspect ratio -->
+            <iframe allow="fullscreen" allowfullscreen height="100%" 
+                    src="https://iframe.mediadelivery.net/embed/372083/aa0a6c83-3ff0-4ad0-94b5-96ea220c4be4?preload=true&responsive=true" 
+                    width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"> <!-- Second video iframe -->
             </iframe>
         </div>
     </div>
