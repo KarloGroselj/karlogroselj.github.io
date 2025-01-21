@@ -7,9 +7,9 @@
     <style>
 body {
     margin: 0; /* Removes default browser margin */
-    padding: 0; /* Removes default browser padding */
-    background-color: black; /* Sets the background color of the page */
-    color: white; /* Sets the text color */
+    padding: 0 1vw; /* Adds padding to the left and right edges of the page */
+    background-color: DarkGrey; /* Sets the background color of the page */
+    color: Black; /* Sets the text color */
     font-family: Arial, sans-serif; /* Sets the font family */
     display: flex; /* Uses flexbox layout */
     flex-direction: column; /* Stacks items vertically */
@@ -32,15 +32,7 @@ header {
 
 header h1 {
     margin: 0; /* Removes default margin */
-    font-size: 1.5vw; /* Sets the font size for the title */
-}
-
-header h2 {
-    margin: 0; /* Removes default margin */
-    font-size: 1vw; /* Sets the font size for the subtitle */
-    color: white; /* Sets the text color */
-    font-weight: normal; /* Sets normal font weight */
-    margin-top: 0.5vw; /* Adds spacing between the title and subtitle */
+    font-size: clamp(0.9rem, 2.5vw, 1.8rem); /* Smaller responsive font size for the title */
 }
 
 .video-container {
@@ -65,7 +57,7 @@ iframe {
     left: 1vw; /* Positions the label from the left */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the label */
     padding: 0.5vw 1vw; /* Adds padding inside the label */
-    font-size: 1.2vw; /* Sets the font size for the label text */
+    font-size: clamp(0.9rem, 2vw, 1.3rem); /* Smaller responsive font size for the label text */
     color: white; /* Sets the text color */
     border-radius: 0.3vw; /* Rounds the corners of the label */
     z-index: 2; /* Ensures the label appears above other elements */
@@ -85,26 +77,35 @@ iframe {
 <body>
     <header>
         <div class="left"> <!-- Container for the header text -->
-            <h1>Karlo Grošelj</h1> <!-- Main title of the page -->
-            <h2>Slike v gibanju</h2> <!-- Subtitle of the page -->
+            <h1>Karlo Grošelj - gibljive slike</h1> <!-- Main title of the page -->
         </div>
     </header>
 
+    <div class="video-container"> <!-- Container for the second video -->
+        <div class="video-label">Prvi dan</div> <!-- Label for the second video -->
+        <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"> <!-- Wrapper to maintain aspect ratio -->
+            <iframe allow="fullscreen" allowfullscreen height="100%" 
+                    src="https://iframe.mediadelivery.net/embed/372083/d9bfac04-b376-4561-8ac6-2ed9473302c3?preload=true&responsive=true" 
+                    width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"> <!-- Second video iframe -->
+            </iframe>
+        </div>
+    </div>
+  
     <div class="video-container"> <!-- Container for the first video -->
         <div class="video-label">Prvi dan doma</div> <!-- Label for the first video -->
         <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"> <!-- Wrapper to maintain aspect ratio -->
             <iframe allow="fullscreen" allowfullscreen height="100%" 
-                    src="https://iframe.mediadelivery.net/embed/372083/5c286cd4-c0a1-44bb-a609-c04f5ee97318?preload=true&responsive=true" 
+                    src="https://iframe.mediadelivery.net/embed/372083/139c5403-2504-4608-a22e-fb9783c8c2db?preload=true&responsive=true" 
                     width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"> <!-- First video iframe -->
             </iframe>
         </div>
     </div>
 
     <div class="video-container"> <!-- Container for the second video -->
-        <div class="video-label">Prvi dan doma</div> <!-- Label for the second video -->
+        <div class="video-label">Doječa mater</div> <!-- Label for the second video -->
         <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"> <!-- Wrapper to maintain aspect ratio -->
             <iframe allow="fullscreen" allowfullscreen height="100%" 
-                    src="https://iframe.mediadelivery.net/embed/372083/aa0a6c83-3ff0-4ad0-94b5-96ea220c4be4?preload=true&responsive=true" 
+                    src="https://iframe.mediadelivery.net/embed/372083/bd6ba4ad-2227-408b-8ea5-713cd26edf3d?preload=true&responsive=true" 
                     width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"> <!-- Second video iframe -->
             </iframe>
         </div>
