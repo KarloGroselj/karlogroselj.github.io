@@ -76,6 +76,16 @@ body {
             background-color: rgba(0, 0, 0, 0);
             z-index: 1;
         }
+
+        @media only screen and (max-width: 768px) {
+            .video-container {
+                transform: rotate(90deg);
+                transform-origin: center;
+                width: 100vh; /* Adjust for rotated view */
+                height: 100vw; /* Adjust for rotated view */
+                overflow: hidden;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,16 +97,16 @@ body {
     </header>
 
     <div class="video-container">
-        <div class="video-label">Alchemy of Atmospheres</div>
+        <div class="video-label">Doječa mater</div>
         <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
             <iframe allow="fullscreen;autoplay" allowfullscreen height="100%" 
-                    src="https://streamable.com/e/i3uwpe?autoplay=1&muted=1" 
+                    src="https://streamable.com/e/i3uwpe?autoplay=1&nocontrols=1" 
                     width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;">
             </iframe>
         </div>
     </div>
       <div class="video-container">
-        <div class="video-label">Alchemy of Atmospheres</div>
+        <div class="video-label">Prvi dan doma</div>
         <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
             <iframe allow="fullscreen;autoplay" allowfullscreen height="100%" 
                     src="https://iframe.mediadelivery.net/embed/372083/aa0a6c83-3ff0-4ad0-94b5-96ea220c4be4?autoplay=true&loop=true&muted=true&preload=true&responsive=true" 
@@ -105,22 +115,5 @@ body {
         </div>
     </div>
 
-    <div class="video-container">
-        <div class="video-label">Alchemy of Atmospheres</div>
-        <div style="position:relative;padding-top:56.25%;">
-            <iframe src="https://iframe.mediadelivery.net/embed/372083/aa0a6c83-3ff0-4ad0-94b5-96ea220c4be4?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-        </div>
-    </div>
-
-    <div class="video-container">
-        <div class="video-label">Alchemy of Atmospheres</div>
-        <div class="video-overlay"></div>
-        <iframe
-            src="https://www.youtube.com/embed/HPYc-lFFobA?autoplay=1&mute=1&controls=0&loop=1&playlist=HPYc-lFFobA&modestbranding=1&rel=0&iv_load_policy=3&fs=0&vq=hd2160"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
 </body>
 </html>
