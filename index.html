@@ -75,7 +75,7 @@
 
         .bridgekeeper {
             font-size: 1.2rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
             padding: 0 1rem;
             color: #ff4500;
             font-style: italic;
@@ -91,7 +91,7 @@
 
         @media (max-width: 768px) {
             .bridge-image {
-                max-width: 70%; /* Larger image for smaller screens */
+                max-width: 90%; /* Larger image for smaller screens */
             }
         }
     </style>
@@ -108,12 +108,13 @@
 </head>
 <body>
     <h1>Stop! Who would cross the Bridge of Death?</h1>
-    <div class="password-container">
+    <p class="bridgekeeper">"Answer me this question, ere the other side ye see!"</p>
+
+<div class="password-container">
         <p style="font-size: 1.5rem;">What is your favorite color?</p>
         <input type="password" id="password">
         <button onclick="checkPassword()">Submit Your Answer</button>
     </div>
-    <p class="bridgekeeper">"Answer me this question, ere the other side ye see!"</p>
     <img src="https://i.imgur.com/QlfpQr2.png" alt="Bridgekeeper" class="bridge-image">
 </body>
 </html>
